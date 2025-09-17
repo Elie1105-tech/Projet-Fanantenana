@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Produits - Fanantenana</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="public/css/aos.css" rel="stylesheet">
@@ -430,7 +430,7 @@
             </div>
             
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>© 2025 Fanantenana. Tous droits réservés.</p>
+                <p>© <span id="year"></span> Fanantenana. Tous droits réservés.</p>
                 <div class="mt-2 text-sm">
                     <a href="#" class="hover:text-primary-yellow">Mentions légales</a> | 
                     <a href="#" class="hover:text-primary-yellow">Politique de confidentialité</a>
@@ -458,6 +458,8 @@
             });
             feather.replace();
         });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
