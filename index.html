@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanantenana - Épices Naturelles de Madagascar</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="public/css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #F9F9F9;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-primary-yellow {
+            background-color: #F4C542;
+        }
+        .text-primary-yellow {
+            color: #F4C542;
+        }
+        .bg-primary-green {
+            background-color: #2E7D32;
+        }
+        .text-primary-green {
+            color: #2E7D32;
+        }
+        .bg-primary-brown {
+            background-color: #6E4B2E;
+        }
+        .text-primary-brown {
+            color: #6E4B2E;
+        }
+        .bg-cream {
+            background-color: #FAFAF0;
+        }
+    </style>
+</head>
+<body class="bg-cream">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/WhatsApp Image 2025-09-15 à 10.44.37_36604287.jpg" alt="Fanantenana Logo" class="h-12 logo-rounded">
+                <span class="ml-2 text-primary-brown font-bold text-xl hidden md:block">Fanantenana</span>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="text-primary-brown hover:text-primary-yellow font-medium">Accueil</a></li>
+                    <li><a href="apropos.html" class="text-primary-brown hover:text-primary-yellow font-medium">À propos</a></li>
+                    <li><a href="produits.html" class="text-primary-brown hover:text-primary-yellow font-medium">Produits</a></li>
+                    <li><a href="contact.html" class="text-primary-brown hover:text-primary-yellow font-medium">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center">
+                <a href="https://wa.me/261XXXXXXXX" class="bg-primary-yellow hover:bg-yellow-500 text-white px-4 py-2 rounded-full font-medium flex items-center">
+                    <i data-feather="shopping-cart" class="mr-2"></i> Demander un devis
+                </a>
+                <button class="md:hidden ml-4" id="mobile-menu-button">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
+            <ul class="space-y-4">
+                <li><a href="index.html" class="block text-primary-brown hover:text-primary-yellow font-medium">Accueil</a></li>
+                <li><a href="apropos.html" class="block text-primary-brown hover:text-primary-yellow font-medium">À propos</a></li>
+                <li><a href="produits.html" class="block text-primary-brown hover:text-primary-yellow font-medium">Produits</a></li>
+                <li><a href="contact.html" class="block text-primary-brown hover:text-primary-yellow font-medium">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/40"></div>
+        <div class="bg-cover bg-center absolute inset-0" style="background-image: url('images/gros-plan-tournesol-fleur.jpg');" ></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="min-h-[48vh] md:min-h-[60vh] flex items-center justify-center py-12 md:py-16 lg:py-20 text-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight" data-aos="fade-up">
+                        Fanantenana – Le goût authentique de Madagascar
+                    </h1>
+                    <p class="text-lg md:text-xl text-white mb-6 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                        Découvrez des épices 100% naturelles, cultivées avec passion à Madagascar
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-4" data-aos="fade-up" data-aos-delay="200">
+                        <a href="produits.html" class="bg-primary-yellow hover:bg-yellow-500 text-white px-6 py-3 rounded-full font-medium">
+                            Nos produits
+                        </a>
+                        <a href="contact.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white px-6 py-3 rounded-full font-medium">
+                            Nous contacter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up">
+                    Nos produits phares
+                </h2>
+                <div class="w-24 h-1 bg-primary-yellow mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Découvrez notre sélection d'épices exceptionnelles, cultivées dans le respect de la nature et des traditions malgaches.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-cream rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up">
+                    <img src="images/batonnets-de-vanille-isoles.jpg" alt="Vanille de Madagascar" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-brown mb-2">Vanille Bourbon</h3>
+                        <p class="text-gray-600 mb-4">Gousses de vanille de Madagascar, riches et aromatiques, parfaites pour pâtisseries et desserts.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary-green font-bold">Sur demande</span>
+                            <a href="https://wa.me/261XXXXXXXXX" class="bg-primary-green hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm flex items-center">
+                                <i data-feather="shopping-cart" class="mr-2 w-4 h-4"></i> Commander
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-cream rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/baton-de-canelle.jpg" alt="Cannelle de Madagascar" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-brown mb-2">Cannelle</h3>
+                        <p class="text-gray-600 mb-4">Cannelle en bâtons ou en poudre, au parfum chaud et sucré, idéale pour vos plats et boissons.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary-green font-bold">Sur demande</span>
+                            <a href="https://wa.me/261XXXXXXXXX" class="bg-primary-green hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm flex items-center">
+                                <i data-feather="shopping-cart" class="mr-2 w-4 h-4"></i> Commander
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-cream rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/poivre.jpg" alt="Poivre noir de Madagascar" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-brown mb-2">Poivre Noir</h3>
+                        <p class="text-gray-600 mb-4">Poivre noir intense et fruité, récolté à maturité pour une saveur exceptionnelle.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary-green font-bold">Sur demande</span>
+                            <a href="https://wa.me/261XXXXXXXXX" class="bg-primary-green hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm flex items-center">
+                                <i data-feather="shopping-cart" class="mr-2 w-4 h-4"></i> Commander
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="produits.html" class="inline-block bg-primary-brown hover:bg-brown-700 text-white px-6 py-3 rounded-full font-medium">
+                    Voir tous nos produits
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-primary-green text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">
+                    Pourquoi nous choisir ?
+                </h2>
+                <div class="w-24 h-1 bg-primary-yellow mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto opacity-90" data-aos="fade-up" data-aos-delay="100">
+                    Notre engagement pour la qualité et le respect de l'environnement fait toute la différence.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center p-6" data-aos="fade-up">
+                    <div class="bg-primary-yellow text-primary-brown w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="award" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Qualité exceptionnelle</h3>
+                    <p class="opacity-90">Nos épices sont rigoureusement sélectionnées pour leur qualité supérieure et leur saveur authentique.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-primary-yellow text-primary-brown w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <!-- <img src="images/leaf-solid-full.svg" class="w-10 h-10" style="color: #6E4B2E;"> -->
+                        <i class="fa fa-seedling" style="font-size: 35px;"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">100% naturel</h3>
+                    <p class="opacity-90">Aucun additif ni traitement chimique, juste des épices pures, cultivées dans le respect de la nature.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary-yellow text-primary-brown w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="globe" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Exportation mondiale</h3>
+                    <p class="opacity-90">Nous livrons partout dans le monde avec des emballages adaptés pour préserver la qualité de nos produits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary-brown text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">
+                Prêt à découvrir nos épices exceptionnelles ?
+            </h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90" data-aos="fade-up" data-aos-delay="100">
+                Contactez-nous pour un devis personnalisé ou pour toute question sur nos produits.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://wa.me/261XXXXXXXXX" class="bg-primary-yellow hover:bg-yellow-500 text-white px-6 py-3 rounded-full font-medium flex items-center justify-center">
+                    <i data-feather="message-circle" class="mr-2"></i> Discuter sur WhatsApp
+                </a>
+                <a href="contact.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white px-6 py-3 rounded-full font-medium">
+                    Autre moyen de contact
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="images/WhatsApp Image 2025-09-15 à 10.44.37_36604287.jpg" alt="Fanantenana Logo" class="h-12 logo-rounded">
+                        <span class="ml-2 text-xl font-bold">Fanantenana</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Des épices naturelles de Madagascar, cultivées avec passion et respect pour la nature.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary-yellow">
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-yellow">
+                            <i data-feather="instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-yellow">
+                            <i data-feather="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary-yellow">Accueil</a></li>
+                        <li><a href="apropos.html" class="text-gray-400 hover:text-primary-yellow">À propos</a></li>
+                        <li><a href="produits.html" class="text-gray-400 hover:text-primary-yellow">Produits</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary-yellow">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Produits</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#vanille" class="text-gray-400 hover:text-primary-yellow">Vanille</a></li>
+                        <li><a href="#cannelle" class="text-gray-400 hover:text-primary-yellow">Cannelle</a></li>
+                        <li><a href="#poivre" class="text-gray-400 hover:text-primary-yellow">Poivre</a></li>
+                        <li><a href="#curcuma" class="text-gray-400 hover:text-primary-yellow">Curcuma</a></li>
+                        <li><a href="#autres" class="text-gray-400 hover:text-primary-yellow">Autres épices</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="map-pin" class="mr-2 w-4 h-4"></i> Antananarivo, Madagascar
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="phone" class="mr-2 w-4 h-4"></i> +261 XX XX XXX XX
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="mail" class="mr-2 w-4 h-4"></i> contact@fanantenana.mg
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© <span id="year"></span> Fanantenana. Tous droits réservés.</p>
+                <div class="mt-2 text-sm">
+                    <a href="#" class="hover:text-primary-yellow">Mentions légales</a> | 
+                    <a href="#" class="hover:text-primary-yellow">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+        <script src="public/js/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <!-- <script src="https://unpkg.com/feather-icons"></script> -->
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Initialize AOS and Feather Icons
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: false
+            });
+            feather.replace();
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
