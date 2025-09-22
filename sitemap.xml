@@ -3,7 +3,7 @@
   <!-- Page d'accueil -->
   <url>
     <loc>https://fanantenana-epice.netlify.app/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,7 +11,7 @@
   <!-- Page produits -->
   <url>
     <loc>https://fanantenana-epice.netlify.app/produits</loc>
-    <lastmod>2024-01-10</lastmod>
+    <lastmod>2025-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -19,7 +19,7 @@
   <!-- Page à propos -->
   <url>
     <loc>https://fanantenana-epice.netlify.app/a-propos</loc>
-    <lastmod>2024-01-05</lastmod>
+    <lastmod>2025-09-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -27,7 +27,7 @@
   <!-- Page contact -->
   <url>
     <loc>https://fanantenana-epice.netlify.app/contact</loc>
-    <lastmod>2024-01-05</lastmod>
+    <lastmod>2025-09-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
