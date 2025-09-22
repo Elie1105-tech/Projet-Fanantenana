@@ -2,3 +2,36 @@ images/*.jpg filter=lfs diff=lfs merge=lfs -text
 *.jpg !text !filter !merge !diff
 *.png !text !filter !merge !diff
 *.zip filter=lfs diff=lfs merge=lfs -text
+
+# Normalisation des fins de ligne
+* text=auto eol=lf
+
+# Toujours traiter ces fichiers comme texte (UTF-8)
+*.html text
+*.css text
+*.js text
+*.json text
+*.xml text
+*.txt text
+*.md text
+*.php text
+*.env text
+
+# Traiter robots.txt comme texte
+robots.txt text
+
+# Fichiers binaires (ne jamais modifier les fins de ligne)
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.svg binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.tar binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
