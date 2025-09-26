@@ -112,7 +112,7 @@
 
                     <aside class="bg-white rounded-lg shadow p-6" data-aos="fade-left">
                         <h3 class="text-xl font-semibold text-primary-brown mb-4" data-aos="fade-up">Envoyez-nous un message</h3>
-                        <form id="contactForm" class="space-y-4" action="#" method="post" data-aos="fade-up" data-aos-delay="100">
+                        <form id="contactForm" class="space-y-4" action="https://formspree.io/f/mdkwkbqg" method="post" data-aos="fade-up" data-aos-delay="100">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700">Nom</label>
                                 <input required name="name" type="text" class="mt-1 block w-full rounded border-gray-200 shadow-sm focus:ring-primary-yellow focus:border-primary-yellow" placeholder="Votre nom">
@@ -239,22 +239,43 @@
         document.getElementById('year').textContent = new Date().getFullYear();
 
         // Contact form handler (simulated AJAX)
-        const contactForm = document.getElementById('contactForm');
         const formMessage = document.getElementById('formMessage');
+        const formspreeForm = document.getElementById('contactForm');
+        if(formspreeForm){
+            formspreeForm.addEventListener('submit', async function(e){
+                e.preventDefault();
+                const data = new FormData(formspreeForm);
+                const res = await fetch(formspreeForm.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if(res.ok){
+                    formspreeForm.reset();
+                    formMessage.classList.remove('hidden');
+                    formMessage.classList.add('bg-green-100', 'text-green-800');
+                    formMessage.textContent = 'Envoi en cours...';
+                    if(formMessage){
+                        setTimeout(() => {
+                            formMessage.textContent = 'Merci ! Votre message a été envoyé avec succès.';
+                        }, 900);
+                    }
+                }
+            });
+        }
+        // contactForm.addEventListener('submit', function(e) {
+        //     e.preventDefault();
+        //     const data = new FormData(contactForm);
+        //     // Simulate a request (replace with real endpoint)
+        //     formMessage.classList.remove('hidden');
+        //     formMessage.classList.add('bg-green-100', 'text-green-800');
+        //     formMessage.textContent = 'Envoi en cours...';
 
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const data = new FormData(contactForm);
-            // Simulate a request (replace with real endpoint)
-            formMessage.classList.remove('hidden');
-            formMessage.classList.add('bg-green-100', 'text-green-800');
-            formMessage.textContent = 'Envoi en cours...';
-
-            setTimeout(() => {
-                formMessage.textContent = 'Merci ! Votre message a été envoyé avec succès.';
-                contactForm.reset();
-            }, 900);
-        });
+        //     setTimeout(() => {
+        //         formMessage.textContent = 'Merci ! Votre message a été envoyé avec succès.';
+        //         contactForm.reset();
+        //     }, 900);
+        // });
     </script>
 </body>
 </html>
